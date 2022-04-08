@@ -1,0 +1,83 @@
+@import "normalize.css/normalize.css";
+@import "./utils/grid.utilities.scss";
+
+:root {
+  --gray50: #f8fafc;
+  --gray100: #f1f5f9;
+  --gray200: #e2e8f0;
+  --gray300: #cbd5e1;
+  --gray400: #94a3b8;
+  --gray500: #64748b;
+  --gray600: #475569;
+  --gray700: #334155;
+  --gray800: #1e293b;
+  --gray900: #0f172a;
+
+  --primary: #275ac2;
+  --secondary: #D80032;
+
+  --info: #0284c7;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --error: #dc2626;
+
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div#__next {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+
+  @media (min-width: 576px) {
+    font-size: 87.5%;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 93.74%;
+  }
+
+  @media (min-width: 576px) {
+    font-size: 100%;
+  }
+}
+
+body {
+  background: var(--gray200);
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.centralized-container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}

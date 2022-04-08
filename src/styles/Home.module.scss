@@ -1,0 +1,19 @@
+.header-container {
+  background: var(--gray800);
+  color: var(--gray200);
+  padding: 1rem 0;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    max-width: max-content;
+  }
+}
+
+.home-section {
+  padding: 2rem 0;
+}

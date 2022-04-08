@@ -1,0 +1,105 @@
+/* BUTTONS STYLES */
+
+.btn-primary {
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  border: 2px solid var(--secondary);
+  color: var(--white);
+}
+
+.btn-info {
+  background: var(--info);
+  border: 2px solid var(--info);
+  color: var(--white);
+}
+
+.btn-success {
+  background: var(--success);
+  border: 2px solid var(--success);
+  color: var(--white);
+}
+
+.btn-warning {
+  background: var(--warning);
+  border: 2px solid var(--warning);
+  color: var(--white);
+}
+
+.btn-error {
+  background: var(--error);
+  border: 2px solid var(--error);
+  color: var(--white);
+}
+
+/* OUTLINED BUTTONS STYLES */
+
+.btn-outlined-primary {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+
+  &:hover {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}
+
+.btn-outlined-secondary {
+  background: transparent;
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+
+  &:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+}
+
+.btn-outlined-info {
+  background: transparent;
+  border: 2px solid var(--info);
+  color: var(--info);
+
+  &:hover {
+    background-color: var(--info);
+    color: var(--white);
+  }
+}
+
+.btn-outlined-success {
+  background: transparent;
+  border: 2px solid var(--success);
+  color: var(--success);
+
+  &:hover {
+    background-color: var(--success);
+    color: var(--white);
+  }
+}
+
+.btn-outlined-warning {
+  background: transparent;
+  border: 2px solid var(--warning);
+  color: var(--warning);
+
+  &:hover {
+    background-color: var(--warning);
+    color: var(--white);
+  }
+}
+
+.btn-outlined-error {
+  background: transparent;
+  border: 2px solid var(--error);
+  color: var(--error);
+
+  &:hover {
+    background-color: var(--error);
+    color: var(--white);
+  }
+}

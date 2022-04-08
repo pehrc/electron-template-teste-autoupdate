@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splash</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .container h1 {
+        color: #2b2d42;
+        font-size: 44px;
+        margin-top: 16px;
+      }
+
+      .container h1 span {
+        color: #d80032;
+      }
+
+      .container p {
+        color: #8d99ae;
+        font-size: 18px;
+        margin-bottom: 24px;
+      }
+      .loader {
+        width: 48px;
+        height: 48px;
+        display: block;
+        margin: 15px auto;
+        position: relative;
+        color: #2b2d42;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+      .loader::after,
+      .loader::before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 50%;
+        left: 50%;
+        transform: scale(0.5) translate(0, 0);
+        background-color: #2b2d42;
+        border-radius: 50%;
+        animation: animloader 1s infinite ease-in-out;
+      }
+      .loader::before {
+        background-color: #d80032;
+        transform: scale(0.5) translate(-48px, -48px);
+      }
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes animloader {
+        50% {
+          transform: scale(1) translate(-50%, -50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <svg
+        width="198"
+        height="133"
+        viewBox="0 0 198 133"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M67.4665 106.822L24.6434 21.0496H0L55.3422 131.7H55.3584L67.4665 106.822Z"
+          fill="url(#paint0_linear)"
+        />
+        <path
+          d="M132.714 23.1514L120.457 48.3345L134.578 77.3496L146.841 52.1508L132.729 23.1514H132.714Z"
+          fill="url(#paint1_linear)"
+        />
+        <path
+          d="M108.186 23.1514C104.831 30.0446 87.1035 66.4759 55.3589 131.701C83.8955 131.701 51.3143 131.701 79.8882 131.701C140.065 8.04763 104.198 81.7386 132.714 23.1514C104.137 23.1514 136.8 23.1514 108.186 23.1514Z"
+          fill="url(#paint2_linear)"
+        />
+        <path
+          d="M173.216 0.459961C141.499 63.1719 152.965 40.0312 120.252 107.246L132.677 132.119C165.645 64.3547 152.71 90.6108 197.742 0.460077H173.216L173.216 0.459961Z"
+          fill="url(#paint3_linear)"
+        />
+        <path
+          d="M16.5254 0L0 21.0496C17.6341 21.0496 35.2057 21.0496 52.7942 21.0496L66.9221 0C48.7238 0 70.8977 0 16.5253 0H16.5254Z"
+          fill="url(#paint4_linear)"
+        />
+        <path
+          d="M105.949 78.1481L93.8184 103.076C93.8235 103.088 108.129 131.688 108.134 131.7H132.653L132.677 131.659C121.148 108.575 120.544 107.37 105.949 78.1479V78.1481Z"
+          fill="url(#paint5_linear)"
+        />
+        <path
+          d="M66.9224 0L52.7944 21.0496L81.389 78.2205L93.5267 53.2739C87.1747 40.5546 72.0728 10.3138 66.9225 0.000116071L66.9224 0Z"
+          fill="url(#paint6_linear)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="13.4998"
+            y1="21"
+            x2="66.9998"
+            y2="132"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#EB1C23" />
+            <stop offset="1" stop-color="#7B0505" />
+          </linearGradient>
+          <linearGradient
+            id="paint1_linear"
+            x1="121.808"
+            y1="30.6196"
+            x2="145.674"
+            y2="70.187"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#EB1C23" />
+            <stop offset="0.25098" stop-color="#EB1C23" />
+            <stop offset="0.980392" stop-color="#720303" />
+            <stop offset="0.988235" stop-color="#720303" />
+            <stop offset="1" stop-color="#720303" />
+          </linearGradient>
+          <linearGradient
+            id="paint2_linear"
+            x1="119.5"
+            y1="23"
+            x2="68.5002"
+            y2="132"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#720303" />
+            <stop offset="1" stop-color="#EB1C23" />
+          </linearGradient>
+          <linearGradient
+            id="paint3_linear"
+            x1="186.5"
+            y1="5.15809e-07"
+            x2="120"
+            y2="132"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#EB1C23" />
+            <stop offset="1" stop-color="#760404" />
+          </linearGradient>
+          <linearGradient
+            id="paint4_linear"
+            x1="67"
+            y1="9.69955e-06"
+            x2="6.77259e-08"
+            y2="21"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#EB1C23" />
+            <stop offset="1" stop-color="#720303" />
+          </linearGradient>
+          <linearGradient
+            id="paint5_linear"
+            x1="105"
+            y1="78"
+            x2="113"
+            y2="132"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#780404" />
+            <stop offset="1" stop-color="#EB1C23" />
+          </linearGradient>
+          <linearGradient
+            id="paint6_linear"
+            x1="66"
+            y1="-2.97278e-07"
+            x2="81"
+            y2="78"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#810607" />
+            <stop offset="1" stop-color="#EB1C23" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <h1><span>W</span>allcob</h1>
+      <p>Gestão de cobranças</p>
+
+    </div>
+  </body>
+</html>
