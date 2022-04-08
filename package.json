@@ -1,9 +1,27 @@
 {
-  "name": "electron-starter",
+  "name": "electron-builder-teste",
   "version": "1.0.0",
-  "main": "build/electron/main.js",
+  "main": "./electron/main.js",
   "author": "Flavio Santos <flavio.santos@allcomsistemas.com.br>",
+  "description": "Electron auto update test.",
+  "repository": "https://github.com/pehrc/teste",
   "license": "MIT",
+  "scripts": {
+    "build": "yarn build-main && yarn build-react",
+    "build-main": "rm -rf ./build/electron && cross-env NODE_ENV=production webpack --mode production --config ./webpack/main.js",
+    "build-react": "rm -rf ./build/react && cross-env NODE_ENV=production webpack --mode production --config ./webpack/react.js",
+    "dev": "cross-env concurrently \"yarn dev-main\" \"yarn dev-react\"",
+    "dev-main": "cross-env NODE_ENV=development webpack --mode development --config ./webpack/main.js --watch",
+    "dev-react": "cross-env NODE_ENV=development webpack --mode development --config ./webpack/react.js --watch",
+    "dist": "rm -rf ./dist/* && electron-builder -lw",
+    "pack": "electron-builder --dir",
+    "dist-linux": "rm -rf ./dist/* && electron-builder -l --dir && electron-builder -l --publish always",
+    "dist-win": "rm -rf ./dist/* && electron-builder -w --dir && electron-builder -w",
+    "start": "electron .",
+    "release": "yarn build && yarn dist",
+    "create-icons": "./scripts/create-icons",
+    "publish": "electron-builder -p always"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/preset-react": "^7.16.7",
@@ -53,19 +71,13 @@
     "react-router-dom": "^6.3.0",
     "sass": "^1.49.10"
   },
-  "scripts": {
-    "build": "yarn build-main && yarn build-react",
-    "build-main": "rm -rf ./build/electron && cross-env NODE_ENV=production webpack --mode production --config ./webpack/main.js",
-    "build-react": "rm -rf ./build/react && cross-env NODE_ENV=production webpack --mode production --config ./webpack/react.js",
-    "dev": "cross-env concurrently \"yarn dev-main\" \"yarn dev-react\"",
-    "dev-main": "cross-env NODE_ENV=development webpack --mode development --config ./webpack/main.js --watch",
-    "dev-react": "cross-env NODE_ENV=development webpack --mode development --config ./webpack/react.js --watch",
-    "dist": "rm -rf ./dist/* && electron-builder -lw --dir && electron-builder -lw",
-    "dist-linux": "rm -rf ./dist/* && electron-builder -l --dir && electron-builder -l --publish always",
-    "dist-win": "rm -rf ./dist/* && electron-builder -w --dir && electron-builder -w",
-    "start": "electron .",
-    "release": "yarn build && yarn dist",
-    "create-icons": "./scripts/create-icons"
-  },
-  "repository": "https://github.com/pehrc/teste"
+  "build": {
+    "appId": "com.electron-starter",
+    "extraResources": "./assets",
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  }
 }

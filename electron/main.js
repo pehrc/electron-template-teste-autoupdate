@@ -1,9 +1,9 @@
-import { app, BrowserWindow } from 'electron';
+import { app } from 'electron';
 import { createAppScreen } from './screens/appScreen';
 import { createSplashScreen } from './screens/splashScreen';
 
-let splash: BrowserWindow | null = null;
-let main: BrowserWindow | null = null;
+let splash = null;
+let main = null;
 
 const createLoadingWindow = () => {
   splash = createSplashScreen({
